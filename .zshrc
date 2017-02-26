@@ -53,8 +53,12 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
-export PATH="$(brew --prefix homebrew/php/php70)/bin:$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.composer/vendor/bin:/usr/local/bin/:$PATH:"
+export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.composer/vendor/bin:/usr/local/bin/"
+#`uname`
+if [[ `uname` == 'Darwin' ]]
+then
+    export PATH="$PATH:/opt/X11/bin:$(brew --prefix homebrew/php/php70)/bin"
+fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
