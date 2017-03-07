@@ -18,8 +18,11 @@ set tabstop=4
 set shiftwidth=4
 set linespace=0
 set history=1000
+set backspace=indent,eol,start
 "set list listchars=tab:› ,trail:-,extends:>,precedes:<,eol:¬
 
+set foldmethod=syntax
+set foldlevelstart=20
 
 let g:airline_powerline_fonts = 1
 
@@ -32,6 +35,7 @@ no <up> <Nop>
 no <down> <Nop>
 no <left> <Nop>
 no <right> <Nop>
+no <tab> za
 
 ino <up> <Nop>
 ino <down> <Nop>
