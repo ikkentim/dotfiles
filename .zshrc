@@ -91,6 +91,16 @@ alias hack_nsa='echo -e "\e[32m"; while :; do for i in {1..$(($(tput cols) / 4))
 alias rmds="find . -type f -name '*.DS_Store' -ls -delete" # From when my Mac was messing with me
 alias hack="git add . && git commit -m things && git pull && git push" # For hackathons, so fuck it
 
+dec2hex()
+{
+  echo "obase=16; $1" | bc
+}
+
+hex2dec()
+{
+  echo "ibase=16; $1" | bc
+}
+
 convertsize()
 {
   convert "$1" -resize "$2x$2" "$2.png"
