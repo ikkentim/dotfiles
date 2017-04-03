@@ -105,3 +105,8 @@ convertsize()
 {
   convert "$1" -resize "$2x$2" "$2.png"
 }
+
+gencircle()
+{
+    convert -size $(($1 * 2 + 1))x$(($1 * 2 + 1)) xc:transparent -fill $2 -draw "circle $1,$1 $1,0" $3
+}
