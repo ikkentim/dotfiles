@@ -42,3 +42,4 @@ ino <down> <Nop>
 ino <left> <Nop>
 ino <right> <Nop>
 map <C-n> :NERDTreeToggle<CR>
+map <C-g> :GitGutterToggle<CR>

@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/monrovia"]
 	path = .vim/bundle/monrovia
 	url = https://github.com/AlessandroYorba/Monrovia
+[submodule ".vim/bundle/vim-gitgutter"]
+	path = .vim/bundle/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
