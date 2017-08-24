@@ -58,6 +58,7 @@ export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.composer/vend
 if [[ `uname` == 'Darwin' ]]
 then
     export PATH="$PATH:/opt/X11/bin:$(brew --prefix homebrew/php/php70)/bin"
+    export DEFAULT_USER=`whoami`
 fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -109,4 +110,9 @@ convertsize()
 gencircle()
 {
     convert -size $(($1 * 2 + 1))x$(($1 * 2 + 1)) xc:transparent -fill $2 -draw "circle $1,$1 $1,0" $3
+}
+
+gittouchcommit()
+{
+    touch $1 && git add $1 && git commit -m "$1"
 }

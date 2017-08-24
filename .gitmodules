@@ -6,7 +6,10 @@
 	url = https://github.com/scrooloose/nerdtree
 [submodule ".vim/bundle/monrovia"]
 	path = .vim/bundle/monrovia
-	url = https://github.com/AlessandroYorba/Monrovia
+	url = https://github.com/ikkentim/vim-monrovia-mirror.git
 [submodule ".vim/bundle/vim-gitgutter"]
 	path = .vim/bundle/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule ".vim/bundle/vim-rooter"]
+	path = .vim/bundle/vim-rooter
+	url = https://github.com/airblade/vim-rooter
