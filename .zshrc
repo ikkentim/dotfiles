@@ -58,6 +58,7 @@ export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.composer/vend
 if [[ `uname` == 'Darwin' ]]
 then
     export PATH="$PATH:/opt/X11/bin:$(brew --prefix homebrew/php/php70)/bin"
+    export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
     export DEFAULT_USER=`whoami`
 fi
 
@@ -91,7 +92,7 @@ alias zshrc="vi ~/.zshrc"
 alias hack_nsa='echo -e "\e[32m"; while :; do for i in {1..$(($(tput cols) / 4))}; do r="$(($RANDOM % 2))"; if [[ $(($RANDOM % 5)) == 1 ]]; then if [[ $(($RANDOM % 4)) == 1 ]]; then v+="\e[1m $r   "; else v+="\e[2m  $r "; fi; else v+="    "; fi; done; echo -e "$v"; v=""; done' # From when I was bored
 alias rmds="find . -type f -name '*.DS_Store' -ls -delete" # From when my Mac was messing with me
 alias hack="git add . && git commit -m things && git pull && git push" # For hackathons, so fuck it
-
+alias vi="vim" # FU vi!
 dec2hex()
 {
   echo "obase=16; $1" | bc
