@@ -26,6 +26,10 @@ set backspace=indent,eol,start
 set foldmethod=syntax
 set foldlevelstart=20
 
+let g:loaded_youcompleteme = 1
+let g:ycm_extra_conf_globlist = ['~/projects/*']
+let g:ycm_register_as_syntastic_checker = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
 let g:airline_powerline_fonts = 1
 
 let mapleader=","
@@ -40,6 +44,15 @@ no <right> <Nop>
 no <tab> za
 
 noremap <bs> :e#<CR>
+noremap <leader>gt :YcmCompleter GoTo<CR>
+noremap <leader>gg :YcmCompleter GoToImprecise<CR>
+noremap <leader>gd :YcmCompleter GoToDefinition<CR>
+noremap <leader>gi :YcmCompleter GoToInclude<CR>
+noremap <leader>d :YcmShowDetailedDiagnostic<CR>
+noremap <leader>t :YcmCompleter GetType<CR>
+noremap <leader>? :YcmCompleter GetDoc<CR>
+noremap <leader>/ :YcmCompleter GetDoc<CR>
+noremap <leader>f :YcmCompleter FixIt<CR>
 noremap <leader>w :FixWhitespace<CR>
 noremap <leader>p :read !pbpaste<CR>
 
