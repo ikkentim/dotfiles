@@ -9,7 +9,6 @@ export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.composer/vend
 if [[ `uname` == 'Darwin' ]]
 then
     export PATH="$PATH:/Applications/Arduino.app/Contents/Java/hardware/tools/avr/bin/"
-    export PATH="$PATH:/opt/X11/bin:$(brew --prefix homebrew/php/php70)/bin"
     export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
     export DEFAULT_USER=`whoami`
     export ZSH_TMUX_AUTOSTART="true"
