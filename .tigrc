@@ -1,6 +1,8 @@
 set main-view                 = line-number:no,interval=5 id:yes,color=no date:relative,local=no,format= author:full commit-title:yes,graph=v2,refs=yes
 
-bind main      [               ?git push
-bind status    [               ?git push
-bind main      ]               ?git pull
-bind status    ]               ?git pull
+bind main      [               >git push
+bind status    [               >git push
+bind main      ]               >git pull
+bind status    ]               >git pull
+
+bind status    .               @git add .
