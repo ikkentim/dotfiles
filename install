@@ -1,14 +1,55 @@
 #!/bin/bash
 
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+function install_pkg {
+    REQUIRED_PKG="$1"
+    PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
+    echo Checking for $REQUIRED_PKG: $PKG_OK
+    if [ "" = "$PKG_OK" ]; then
+          echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
+            sudo apt-get --yes install $REQUIRED_PKG
+    fi
+}
+
+function dot_link {
+    if [[ -L "$1" ]]
+    then
+        echo "$1 is already linked"
+        return
+    fi
+
+    if [[ -f "$1" ]] || [[ -d "$1" ]]
+    then
+        echo "$1 exists. Moving to bak-$1"
+        mv "$1" "bak-$1"
+    fi
+
+    echo "$1 linked"
+    ln -s dotfiles/$1 $1
+}
+
+echo
+echo Installing packages...
+echo ----------------------
+
+# Install ZSH
+install_pkg zsh
+
+# Install oh-my-zsh
+[[ -d ~/.oh-my-zsh ]] || sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install dotfiles links
+echo
+echo Installing dotfiles...
+echo ----------------------
 
 cd ~/
-ln -s dotfiles/.gitignore .gitignore
-ln -s dotfiles/.gitconfig .gitconfig
-ln -s dotfiles/.vim .vim
-ln -s dotfiles/.vimrc .vimrc
-ln -s dotfiles/.zshrc .zshrc
-ln -s dotfiles/.tmux.conf .tmux.conf
-ln -s dotfiles/.tigrc .tigrc
 
+dot_link .gitignore
+dot_link .gitconfig
+dot_link .vim
+dot_link .vimrc
+dot_link .zshrc
+dot_link .tmux.conf
+dot_link .tigrc
 
+echo "Done!"
