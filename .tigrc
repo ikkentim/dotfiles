@@ -1,4 +1,6 @@
-set main-view   = line-number:no,interval=5 id:yes,color=no date:relative,local=no,format= author:full commit-title:yes,graph=v2,refs=yes
+set main-view   = line-number:no,interval=5 id:yes,color=no date:relative,local=no,format= author:full,maxwidth=20 commit-title:yes,graph=v2,refs=yes
+set blame-view  = date:relative author:full,maxwidth=20 file-name:auto,maxwidth=50 id:yes,color line-number:yes,interval=5 text
+set tree-view   = line-number:no,interval=5 author:full,maxwidth=20 file-size:units date:relative id:no file-name
 
 bind main       [   >git push
 bind status     [   >git push
