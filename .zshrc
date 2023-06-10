@@ -1,7 +1,7 @@
 export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="agnoster"
-plugins=(git git-flow tmux doctl gh)
+plugins=(git git-flow gh doctl)
 
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
