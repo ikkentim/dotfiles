@@ -13,3 +13,12 @@
 [submodule ".vim/bundle/vim-trailing-whitespace"]
 	path = .vim/bundle/vim-trailing-whitespace
 	url = https://github.com/bronson/vim-trailing-whitespace.git
+[submodule ".vim/bundle/omnisharp-vim"]
+	path = .vim/bundle/omnisharp-vim
+	url = https://github.com/OmniSharp/omnisharp-vim
+[submodule ".vim/bundle/asyncomplete.vim"]
+	path = .vim/bundle/asyncomplete.vim
+	url = https://github.com/prabirshrestha/asyncomplete.vim
+[submodule ".vim/bundle/fzf.vim"]
+	path = .vim/bundle/fzf.vim
+	url = https://github.com/junegunn/fzf.vim

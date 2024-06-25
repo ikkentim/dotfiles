@@ -31,8 +31,20 @@ echo
 echo Installing packages...
 echo ----------------------
 
-# Install ZSH
-install_pkg zsh
+if [[ $OSTYPE == 'darwin'* ]]; then
+
+    # Install packages for macos
+    brew install fzf
+    brew install the_silver_searcher
+    brew install ripgrep
+
+ else
+
+    # Install packages for debian?
+    install_pkg zsh
+
+fi
+
 
 # Install oh-my-zsh
 [[ -d ~/.oh-my-zsh ]] || sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
