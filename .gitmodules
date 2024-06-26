@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/fzf.vim"]
 	path = .vim/bundle/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule "tmux-power"]
+	path = tmux-power
+	url = https://github.com/wfxr/tmux-power.git
