@@ -5,6 +5,7 @@ plugins=(git git-flow gh doctl tmux)
 
 ZSH_TMUX_AUTOSTART=true
 
+export DOTNET_ROOT=/usr/local/share/dotnet
 export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 source $ZSH/oh-my-zsh.sh
